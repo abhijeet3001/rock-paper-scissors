@@ -19,3 +19,11 @@ function playRound(playerSelection, computerSelection) {
     return computerSelection === "rock"? "You Lose! Rock beats Scissors": "You Win! Scissors beats Paper";
   }
 }
+function game(e){
+  console.log(e.target.value);
+  let result=playRound(e.target.value,getComputerChoice);
+  console.log(result);
+  
+}
+const btn=document.querySelectorAll('.btn');
+btn.forEach(button => button.addEventListener('click',game));
