@@ -19,3 +19,9 @@ function playRound(playerSelection, computerSelection) {
     return computerSelection === "rock"? "You Lose! Rock beats Scissors": "You Win! Scissors beats Paper";
   }
 }
+function game(){
+  for(let i=0;i<5;i++){
+    let playerChoice=prompt("Rock, Paper or Scissors");
+    console.log(playRound(playerChoice, getComputerChoice()));
+  }
+}
