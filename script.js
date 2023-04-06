@@ -21,7 +21,7 @@ function playRound(playerSelection, computerSelection) {
 }
 function game(e){
   console.log(e.target.value);
-  let result=playRound(e.target.value,getComputerChoice);
+  let result=playRound(e.target.value,getComputerChoice());
   console.log(result);
   
 }
