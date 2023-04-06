@@ -5,7 +5,7 @@ body{
 }
 
 .header{
-    background-color: black;
+    background-color: #111720;
     display: flex;
     justify-content: center;
     border-bottom: solid 4px gray;
