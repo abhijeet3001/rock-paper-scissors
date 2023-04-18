@@ -1,23 +1,26 @@
 body{
     margin: 0;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    background-color: #a8a0e259;
+    background-color: #0f172a;
 }
 
 .header{
-    background-color: #111720;
+    background-color: #020617;
     display: flex;
     justify-content: center;
-    border-bottom: solid 4px gray;
+    border-bottom: solid 4px #64748b;
 }
 h1{
-    color: white;
+    color: #94a3b8;
 }
-.container{
+.container, .score{
     display: flex;
     flex-direction: column;
     align-items: center;
     gap:40px
+}
+.score{
+    gap: 0px;
 }
 .options{
     display: flex;
@@ -25,7 +28,8 @@ h1{
     justify-content: space-between;
     
 }
-.result{
+
+.result, .scoreboard{
     margin-top: 40px;
     width: 400px;
     height: 100px;
@@ -33,6 +37,22 @@ h1{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.result{
+    background-color: lightblue;
+    border-radius: 10px;
+}
+.scoreboard{
+    height: 50px;
+    width: 120px;
+    border:red solid ;
+    border-radius: 24px;
+}
+.board{
+    display: flex;
+    text-align: center;
+    gap: 40px;
+    
 }
 .btn{
     height: 100px;
