@@ -1,15 +1,15 @@
 let playerScore = 0;
 let computerScore = 0;
-let isGameFinished=false;
+let isGameFinished = false;
 
 function getComputerChoice() {
   let val = Math.floor(Math.random() * 3) + 1;
   if (val === 1) return "rock";
   if (val === 2) return "paper";
-  if (val === 3) return "scissors";I
+  if (val === 3) return "scissors";
 }
 function playRound(playerSelection, computerSelection) {
-  if(isGameFinished) return ;
+  if (isGameFinished) return;
   if (playerSelection === computerSelection) return "Tie";
   if (playerSelection === "rock") {
     if (computerSelection === "paper") {
@@ -40,8 +40,7 @@ function playRound(playerSelection, computerSelection) {
   }
 }
 
-
-const resultbox = document.querySelector(".result");
+const resultbox = document.querySelector("#display");
 
 function scores(winner) {
   winner === "player" ? playerScore++ : computerScore++;
@@ -50,16 +49,16 @@ function scores(winner) {
   playerScoreboard.textContent = playerScore;
   computerScoreboard.textContent = computerScore;
   if (playerScore === 5 || computerScore === 5) {
-    isGameFinished=true;
+    isGameFinished = true;
   }
 }
 
 function game(e) {
   let result = playRound(e.target.value, getComputerChoice());
   resultbox.textContent = result;
-  if(isGameFinished)
-  resultbox.textContent =
-    playerScore === 5 ? "You won the game" : "You lost the game to computer";
+  if (isGameFinished)
+    resultbox.textContent =
+      playerScore === 5 ? "You won the game" : "You lost the game to computer";
 }
 const btn = document.querySelectorAll(".btn");
 btn.forEach((button) => button.addEventListener("click", game));
